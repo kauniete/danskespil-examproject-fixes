@@ -1,0 +1,1272 @@
+@import url("https://fonts.googleapis.com/css?family=Fontdiner+Swanky&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+/* I've reset bootstrap's box-sizing due to conflict with the game  */
+#game *,
+::after,
+::before {
+  box-sizing: initial;
+}
+
+/* GENERAL */
+body {
+  width: 100vw;
+  background-color: #fffdf4;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* NAVIGATION */
+#logout {
+  display: none;
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+}
+#btn-login {
+  text-decoration: none;
+  font-weight: 600;
+  color: white;
+}
+#btn-login:hover,
+#logout:hover {
+  color: #2f0303;
+}
+.navbar {
+  background-color: #a78a52;
+}
+.intro {
+  padding: 15px;
+  text-align: center;
+  color: white;
+  font-size: 16px;
+}
+
+.navbar-toggler {
+  color: white;
+  border: none;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgb(255,255,255)' stroke-width='3' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+.navbar-dark .navbar-text a:hover,
+.navbar-dark .navbar-text a:focus {
+  color: #554428 !important;
+}
+button.navbar-toggler:focus {
+  outline: 1px none;
+}
+
+.link,
+.nav-link {
+  color: white !important;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+.nav-link:hover,
+.link:hover {
+  text-decoration: none;
+  color: #2e0202 !important;
+}
+.active .nav-link {
+  color: #2e0202 !important;
+}
+.logo {
+  max-width: 170px;
+}
+
+@media (min-width: 576px) {
+  .link {
+    position: relative;
+    right: 0vw;
+  }
+}
+
+@media (min-width: 768px) {
+  .link {
+    position: fixed;
+    right: 5vw;
+  }
+}
+
+@media (min-width: 992px) {
+  .link {
+    position: fixed;
+    right: 10vw;
+  }
+}
+@media (min-width: 1200px) {
+  .link {
+    position: fixed;
+    right: 10vw;
+  }
+}
+/*navbar code end*/
+
+/*under18*/
+.under18pagehtml {
+  min-height: 100vh;
+}
+
+.under18pagebody {
+  font-family: "Open Sans", sans-serif;
+  /*background-color: #2c4b62;*/
+  background-image: linear-gradient(
+    to bottom,
+    #95f3ff,
+    #92ebf9,
+    #8fe3f2,
+    #8cdcec,
+    #89d4e5,
+    #82c6d8,
+    #7ab9ca,
+    #73acbd,
+    #6596a6,
+    #58818f,
+    #4b6d79,
+    #3e5963
+  );
+  color: white;
+}
+
+.wrapper {
+  background-color: #4b747e;
+  margin-top: 7%;
+  margin-left: 27%;
+  margin-right: 27%;
+  border-radius: 5px;
+
+  display: grid;
+  grid-template-columns: 1fr 1.8fr 1fr;
+  grid-template-rows: 0.6fr 1fr 0.6fr 0.6fr; /*or 0.6 for buttons*/
+  grid-template-areas:
+    ". logo1 ."
+    ". warning ."
+    ". over18 ."
+    ". under18 .";
+}
+
+.logo1 {
+  margin-top: 20%;
+  grid-area: logo1;
+  padding: 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navbar img {
+  width: 200px;
+}
+.warning {
+  grid-area: warning;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 2%;
+}
+
+.over18 {
+  grid-area: over18;
+  text-align: center;
+  margin-top: 15%;
+  margin-bottom: 10%;
+}
+
+.under18 {
+  grid-area: under18;
+  text-align: center;
+  margin-bottom: 20%;
+}
+.over18btn {
+  color: white;
+  text-decoration: none;
+  background-color: #25445b;
+  padding: 4%;
+  padding-left: 17%;
+  padding-right: 17%;
+  border-radius: 17px;
+  font-size: 18px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+  font-weight: 700;
+}
+.under18btn {
+  font-size: 12px;
+  font-weight: 500;
+}
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 0.7fr 1.8fr 0.7fr;
+    grid-template-rows: 0.6fr 1fr 0.3fr 0.3fr;
+  }
+  .under18 {
+    margin-bottom: 5%;
+  }
+}
+@media screen and (max-width: 375px) {
+  .wrapper {
+    grid-template-columns: 0.7fr 1.8fr 0.7fr;
+    grid-template-rows: 0.3fr 1fr 0.3fr 0.3fr;
+  }
+  .under18 {
+    margin-bottom: 5%;
+  }
+  .over18 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+/*under18 end*/
+
+#game {
+  background: url(../img/background.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+
+/* //// Layout /////*/
+
+/* Game */
+#brainSpin {
+  box-sizing: border-box;
+  width: 90vw;
+  height: 100vh;
+  border-radius: 1px 1px 1px 1px;
+  margin: auto;
+}
+
+#rabbit_desk,
+#joker_desk {
+  display: none;
+}
+
+/*Social media field*/
+
+#socialmedia {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+}
+
+#socialmedia p {
+  display: block;
+}
+
+#facebookicon {
+  font-size: 50px;
+  color: #3b5998;
+  margin-right: 10px;
+}
+
+#twittericon {
+  font-size: 50px;
+  color: #1da1f2;
+}
+
+/* Field to subscribe */
+#subscribefield {
+  background-color: #8a7143;
+  width: 100%;
+  height: 148px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "txt email" "txt btn";
+}
+
+#subscribefield p {
+  grid-area: "txt";
+  color: white;
+  width: 128px;
+  margin: 25px 20px 22px 30px;
+  font-size: 16px;
+}
+
+#subscribebox input {
+  grid-area: "email";
+  color: #2f0303;
+  font-size: 16px;
+  width: 180px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.78);
+  border: none;
+  margin: 25px 30.93px 8px auto;
+  padding-left: 6px;
+  border-radius: 5px;
+}
+
+#subscribebox button {
+  grid-area: "btn";
+  color: white;
+  height: 39px;
+  width: 180px;
+  border: none;
+  border-radius: 5px 5px 5px 5px;
+  font-size: 18px;
+  background-color: #a78a52;
+}
+
+/* Section of games */
+
+#othergames {
+  display: flex;
+  flex-direction: column;
+}
+
+#imagecontainer {
+  margin: auto 10% 30px 15%;
+  padding-bottom: 2em;
+  display: grid;
+  grid-row-gap: 20px;
+  grid-column-gap: 5px;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+}
+
+#imagecontainer img {
+  max-width: 110px;
+  border-radius: 5px;
+}
+
+#othergames h1 {
+  color: #2e0202;
+  font-size: 28px;
+  width: 226px;
+  margin: 63.63px auto 27.86px auto;
+  text-align: center;
+}
+
+#underline {
+  grid-area: underline;
+  background-color: #2e0202;
+  height: 2px;
+  width: 139px;
+  margin: auto auto 70px auto;
+}
+
+#arcadeBomb {
+  box-shadow: 0px 3px 6px #8deff9;
+}
+
+#blackKnight {
+  box-shadow: 0px 3px 6px #a61e6c;
+}
+
+#cashVandal {
+  box-shadow: 0px 3px 6px #0000007c;
+}
+
+#ecuadorGold {
+  box-shadow: 0px 3px 6px #fae596;
+}
+
+#crazyGenie {
+  grid-area: crazyGenie;
+  box-shadow: 0px 3px 6px #221e72;
+}
+
+#grandWheel {
+  box-shadow: 0px 3px 6px #a61e6c;
+}
+
+#cinderellasBall {
+  box-shadow: 0px 3px 6px #1b147b;
+}
+
+#holyDiver {
+  box-shadow: 0px 3px 6px #141c27;
+}
+
+#chi {
+  display: none;
+  box-shadow: 0px 3px 6px pink;
+}
+
+#irishFrenzy {
+  display: none;
+  box-shadow: 0px 3px 6px lightgreen;
+}
+
+/* Button to full site */
+
+#casinolink {
+  background-color: #a78a52;
+  color: white;
+  font-size: 14px;
+
+  height: 44.87px;
+  border-radius: 5px;
+  box-shadow: 0px 3px 6px #00000016;
+  text-decoration: none;
+  padding: 11.13px 19.54px 9.74px 18.45px;
+  margin: auto;
+}
+
+/* Footer */
+
+footer {
+  margin-top: 74.07px;
+  background-color: #a78a52;
+  color: white;
+  padding: 10x;
+  height: 190px;
+}
+
+footer img {
+  max-width: 30%;
+  margin: 15px auto 15px 8px;
+}
+
+#table {
+  margin-left: 12px;
+}
+
+#table a {
+  color: white;
+  text-decoration: none;
+}
+
+#table a:hover {
+  color: #2e0202;
+}
+
+.column {
+  width: 130px;
+  font-size: 11px;
+}
+
+.column #customerservice {
+  color: white;
+  height: 39px;
+  border: none;
+  border-radius: 5px 5px 5px 5px;
+  background-color: #8a7143;
+  padding: 8px;
+  box-shadow: 0px 3px 6px #00000016;
+  font-size: 10px;
+  text-decoration: none;
+}
+
+.column #customerservice:hover {
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  #subscribefield p {
+    width: 463px;
+    margin: 58px -10px 57px 100px;
+  }
+
+  #imagecontainer {
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  }
+
+  #imagecontainer img {
+    max-width: 170px;
+    border-radius: 5px;
+  }
+
+  /* Footer */
+
+  footer img {
+    max-width: 20%;
+    margin: 15px auto 15px 6px;
+  }
+
+  .column {
+    width: 160px;
+    font-size: 13px;
+  }
+
+  .column #customerservice {
+    font-size: 13px;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 920px) {
+  #subscribebox input {
+    width: 290px;
+  }
+
+  #subscribebox button {
+    width: 290px;
+  }
+  /* Footer */
+
+  footer {
+    height: 210px;
+  }
+
+  .column {
+    width: 180px;
+    font-size: 14px;
+  }
+
+  .column #customerservice {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #game {
+    background: #021f2e;
+    height: 100%;
+    background: url(../img/slots/background.jpg) no-repeat center center;
+    background-size: cover;
+  }
+
+  .intro {
+    color: white;
+  }
+
+  #brainSpin {
+    width: 1014.93px;
+    height: 543px;
+    /* box-shadow: 0px 0px 6px #00000058; */
+    margin: 35px auto 57px auto;
+  }
+
+  #rabbit_desk,
+  #joker_desk {
+    display: block;
+  }
+
+  #rabbit_desk {
+    width: 10%;
+    position: absolute;
+    top: 560px;
+    left: 2%;
+  }
+
+  #joker_desk {
+    width: 15%;
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+  }
+
+  #socialmedia {
+    background-color: rgba(255, 255, 255, 0.432);
+    position: absolute;
+    top: 40%;
+    left: 0;
+  }
+
+  #socialmedia p {
+    display: none;
+  }
+
+  #socialmediaIcons {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #facebookicon {
+    font-size: 70px;
+  }
+
+  #twittericon {
+    font-size: 70px;
+  }
+
+  #subscribefield {
+    height: 182px;
+    margin-top: -13px;
+  }
+
+  #subscribefield p {
+    width: 463px;
+    margin: 58px -10px 57px 233px;
+  }
+
+  #subscribebox input {
+    width: 441.6px;
+    height: 40px;
+    margin: 58px 168.94px 8.87px auto;
+  }
+
+  #subscribebox button {
+    height: 41.13px;
+    width: 441.6px;
+    margin: auto 168.94px 34px auto;
+  }
+
+  #imagecontainer {
+    margin-left: 123px;
+    margin-right: 119px;
+  }
+
+  #chi {
+    display: block;
+  }
+
+  #irishFrenzy {
+    display: block;
+  }
+
+  #othergames h1 {
+    margin: 113.64px auto 17.86px auto;
+  }
+  #underline {
+    margin: auto auto 80.64px auto;
+  }
+
+  footer {
+    height: 250px;
+  }
+
+  footer img {
+    max-width: 15%;
+    margin-left: 39px;
+    margin-top: 30px;
+  }
+
+  #table {
+    margin-left: 12px;
+  }
+
+  .column {
+    padding: 15px 35px 35px 35px;
+    width: 250px;
+    font-size: 16px;
+  }
+
+  .column #customerservice {
+    height: 39px;
+    width: 210.07px;
+    font-size: 16px;
+    padding: 11.13px 59.54px 9.74px 58.45px;
+  }
+}
+
+/* The GAME STARTS HERE */
+
+.jSlots-wrapper {
+  overflow: hidden;
+  height: 20px;
+}
+
+.slot {
+  float: left;
+}
+/* first slot line */
+.firstSlot {
+  background-color: #021f2e;
+}
+/* second slot line */
+
+.secondSlot {
+  background-color: #2c4b62;
+}
+/* third slot line */
+
+.thirdSlot {
+  background-color: #021f2e;
+}
+/* images limits !important DO NOT CHANGE! */
+
+.zombie {
+  max-height: 100px;
+  max-width: 100px;
+}
+/* don't try to understand this,this .jSlots-wrapper is created by library */
+
+.fancy .jSlots-wrapper {
+  overflow: hidden;
+  height: 100px;
+  display: block;
+  max-width: 500px;
+}
+/*  !important DO NOT CHANGE! */
+
+.fancy .slot li {
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fancy .slot li img {
+  max-width: 80px;
+  max-height: 80px;
+}
+
+.fancy .slot li span {
+  display: block;
+}
+.playFancy {
+  font-size: 25px;
+  background: linear-gradient(
+    to bottom,
+    rgba(78, 173, 187, 1) 0%,
+    rgba(37, 68, 91, 1) 100%
+  );
+  color: #fff;
+  border: none;
+  padding: 5px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 280px;
+  font-family: "Fontdiner Swanky", cursive;
+  letter-spacing: 5px;
+  box-shadow: 0px 10px 5px 0px #021f2e6b;
+  transform: translate(110px, -10px);
+}
+.faded {
+  animation: fadeOut 1.1s;
+}
+.disabled {
+  display: none;
+}
+.animate {
+  animation: tada 1s;
+}
+.animate1 {
+  animation: scoreAdd 1s;
+}
+.animate2 {
+  animation: bounceOut 2s;
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes bounceOut {
+  0% {
+    transform: scale(1) translateY(-1px);
+  }
+  25% {
+    opacity: 0;
+    transform: scale(0.95) translateY(-15px);
+  }
+  50% {
+    transform: scale(1.1) translateY(-20px);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.3) translateY(-25px);
+  }
+}
+@keyframes tada {
+  0% {
+    transform: scale(2) translateX(-100px);
+    color: #e62a75;
+  }
+  10%,
+  20% {
+    transform: scale(0.9) rotate(-3deg) translateX(-80px);
+  }
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: scale(1.5) rotate(3deg) translateX(-80px);
+  }
+  40%,
+  60%,
+  80% {
+    transform: scale(1) rotate(-3deg) translateX(-80px);
+  }
+  100% {
+    transform: scale(1) rotate(0) translateX(-60px);
+  }
+}
+@keyframes scoreAdd {
+  0% {
+    transform: scale(1.2);
+    color: #e62a75;
+  }
+  10%,
+  20%,
+  30% {
+    transform: scale(1.3);
+  }
+  40%,
+  60%,
+  80% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.fancy {
+  width: 500px;
+  height: 300px;
+  right: 50%;
+  border-radius: 5px;
+  border: 10px solid rgba(255, 255, 255, 0.5);
+  margin-left: 80px;
+  transform: scale(1.2);
+}
+.rightSide {
+  left: 50%;
+  width: 60vh;
+  height: 450px;
+  margin-top: 40px;
+}
+.leftSide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.winningDiv {
+  width: 98%;
+  height: 5vh;
+  font-size: 25px;
+  font-family: "Fontdiner Swanky", cursive;
+  color: #fff;
+  padding: 5px 0px;
+  margin: 4px 2px;
+  border-radius: 5px;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.3);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
+.rightSideInner {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.wordWin,
+.wordSpins,
+.wordScore {
+  transform: translate(10px, 5px);
+}
+.playerScore {
+  padding: 5px;
+  text-align: right;
+}
+.fullGame {
+  border: 10px solid #2c4b62;
+  border-radius: 5px;
+  width: 100%;
+  transform: scale(0.9) translate(-180px, -50px);
+}
+
+.theGame {
+  background: url("../img/background.jpg");
+  background-size: cover;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5vw;
+  height: 55vh;
+}
+.contentWrapper {
+  border: 1px solid black;
+}
+.topPlayers,
+.combos {
+  font-size: 25px;
+  background: #7790a4;
+  font-family: "Fontdiner Swanky", cursive;
+  color: #fff;
+  border: none;
+  padding: 5px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  /* margin: 5px 4px; */
+  cursor: pointer;
+  border-radius: 5px;
+  max-width: 200vw;
+  box-shadow: 0px 5px 5px 0px #021f2e6b;
+}
+.topPlayers:active,
+.combos:active {
+  background-color: #2c4b62;
+}
+.topPlayers:hover,
+.combos:hover {
+  background: #2c4b62;
+}
+
+.topList {
+  background: rgba(255, 255, 255, 0.288);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 5px;
+  width: 100%;
+  font-family: "Fontdiner Swanky", cursive;
+  color: white;
+  height: 280px;
+}
+
+#leaderboardNames {
+  padding: 5px;
+  text-align: left;
+  margin-left: 2px;
+}
+
+#leaderboardScores {
+  padding: 5px;
+  text-align: right;
+  margin-right: 22px;
+}
+
+/*Combos*/
+
+#brainCombos {
+  background: rgba(255, 255, 255, 0.288);
+  border-radius: 5px;
+  width: 100%;
+  height: 280px;
+  padding-top: 2%;
+}
+.comboList {
+  width: 20vw;
+  margin: 0 auto;
+}
+
+#brainCombos img {
+  width: 10%;
+}
+
+.comboheading {
+  font-family: "Fontdiner Swanky", cursive;
+  color: white;
+  border: 2px solid white;
+  width: 90%;
+  padding: 4px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  margin-left: 3%;
+  font-size: 11px;
+}
+
+#onebrain p,
+#twobrains p,
+#threebrains p,
+#fourbrains p,
+#fivebrains p {
+  font-family: "Fontdiner Swanky", cursive;
+  color: white;
+  float: right;
+  margin-right: 5%;
+  font-size: 11px;
+}
+
+#onebrain *,
+#twobrains *,
+#threebrains *,
+#fourbrains *,
+#fivebrains * {
+  display: inline-block;
+}
+
+#onebrain,
+#twobrains,
+#threebrains,
+#fourbrains,
+#fivebrains {
+  margin-left: 5%;
+  margin-top: 1%;
+}
+
+#comboheading1 {
+  margin-top: 1%;
+}
+
+.dots {
+  font-size: 55px;
+  font-family: "Fontdiner Swanky", cursive;
+  color: #fff;
+  border: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  letter-spacing: 15px;
+}
+
+.tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas:
+    "gameHeader gameHeader gameHeader gameHeader"
+    "theGame"
+    "theGame"
+    "theGame"
+    "theGame";
+  width: 95%;
+  margin: 0 auto;
+}
+
+.gameHeader {
+  grid-area: gameHeader;
+  height: 10vh;
+  background-color: #2c4b62;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "spinAmount gameLogo ourScore";
+}
+
+.theGame {
+  grid-area: theGame;
+}
+.spinAmount {
+  grid-area: spinAmount;
+  width: 20vw;
+  height: 5vh;
+  font-size: 25px;
+  font-family: "Fontdiner Swanky", cursive;
+  color: #fff;
+  margin: 4px 2px;
+  border-radius: 5px;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.3);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.gameLogo {
+  grid-area: gameLogo;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gameLogo img {
+  max-height: 80px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  padding: 3px;
+  box-shadow: 0px 10px 5px 0px #021f2e6b;
+}
+.headerWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ourScore {
+  grid-area: ourScore;
+  width: 20vw;
+  height: 5vh;
+  font-size: 25px;
+  font-family: "Fontdiner Swanky", cursive;
+  color: #fff;
+  margin: 4px 2px;
+  border-radius: 5px;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.3);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 481px) and (max-width: 1287px) {
+  .gameLogo img {
+    max-height: 60px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 3px;
+    box-shadow: 0px 10px 5px 0px #021f2e6b;
+  }
+  .spinAmount {
+    grid-area: spinAmount;
+    width: 30vw;
+    height: 5vh;
+    font-size: 20px;
+    font-family: "Fontdiner Swanky", cursive;
+    color: #fff;
+    margin: 4px 2px;
+    border-radius: 5px;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.3);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .ourScore {
+    grid-area: ourScore;
+    width: 30vw;
+    height: 5vh;
+    font-size: 20px;
+    font-family: "Fontdiner Swanky", cursive;
+    color: #fff;
+    margin: 4px 2px;
+    border-radius: 5px;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.3);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #brainSpin {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 1px 1px 1px 1px;
+    margin: 0;
+    top: 0;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "gameHeader"
+      "theGame";
+    width: 100vw;
+    margin: 0 auto;
+    transform: scale(0.95) translate(-30px, -100px);
+  }
+  .fullGame {
+    border: 10px solid #2c4b62;
+    border-radius: 5px;
+    width: 100%;
+    transform: scale(0.9);
+  }
+  .theGame {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "leftSide" "rightSide";
+    height: 100%;
+  }
+
+  .leftSide {
+    grid-area: leftSide;
+    margin: 0 auto;
+  }
+  .rightSide {
+    grid-area: rightSide;
+    margin: 25px auto;
+    transform: scale(1.05) translateY(25px);
+  }
+  .fancy {
+    transform: scale(1.05) translateY(25px);
+    margin: 0 auto;
+  }
+}
+@media (min-width: 0px) and (max-width: 481px) {
+  .gameLogo img {
+    max-height: 50px;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    padding: 3px;
+    box-shadow: 0px 10px 5px 0px #021f2e6b;
+  }
+  .spinAmount {
+    grid-area: spinAmount;
+    width: 30vw;
+    height: 5vh;
+    font-size: 18px;
+    font-family: "Fontdiner Swanky", cursive;
+    color: #fff;
+    margin: 4px 2px;
+    border-radius: 5px;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.3);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .ourScore {
+    grid-area: ourScore;
+    width: 30vw;
+    height: 5vh;
+    font-size: 18px;
+    font-family: "Fontdiner Swanky", cursive;
+    color: #fff;
+    margin: 4px 2px;
+    border-radius: 5px;
+    border: 5px solid rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.3);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #brainSpin {
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 1px 1px 1px 1px;
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "gameHeader"
+      "theGame";
+    width: 100vw;
+    margin: 0 auto;
+  }
+  .fullGame {
+    border: 10px solid #2c4b62;
+    border-radius: 5px;
+    width: 500px;
+    transform: scale(0.8) translate(-60px, -50px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .theGame {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "leftSide" "rightSide";
+    height: 100%;
+    width: 100%;
+  }
+
+  .leftSide {
+    grid-area: leftSide;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .rightSide {
+    grid-area: rightSide;
+    margin: 0 auto;
+    transform: scale(0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .fancy {
+    transform: scale(0.8);
+    margin: 0 auto;
+  }
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.brainCombosDiv {
+  border-radius: 5px;
+  width: 100%;
+  max-height: 350px;
+  transform: scale(0.8) translateY(30px);
+}
