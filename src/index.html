@@ -100,7 +100,7 @@
                       <div class="headerWrapper">
                         <div class="spinAmount">
                           <span class="wordSpins">Spins:</span>
-                          <span class="playerScore" id=spinAmount>5</span>
+                          <span class="playerScore" id=spinAmount>3</span>
                         </div>
                       </div>
                         <div class="gameLogo">
@@ -463,19 +463,17 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="modalWelcomeNewTitle">
-              Welcome to Casino!
-            </h5>
-
+            <img class="logo__modal" src="./img/logo_no_8_most_votes.png" alt="Brain spin logo">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body display__flex">
+            <img class="img__spin-tickets" src="./img/spin3.svg" alt="Picture of 3 tickets to play brain spin">
+            <h3 class="modal-subtitle">You have <span class="nr--large">3</span> spins!</h3>
             <p id="welcomeText">Here is a welcome 🎁 to you<br>
-            take 5 free spins to play the BRAIN SPIN game!<br>
+            take 3 free spins to play the BRAIN SPIN game!<br>
             Good luck!</p>
-            <img class="img--small" src="./img/slots/brain-fork.png" alt="Brain on a fork">
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-primary btn__base btn--pink"
@@ -503,6 +501,10 @@
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
+            <img class="logo__modal" src="./img/logo_no_8_most_votes.png" alt="Brain spin logo">
+
+            
+            <!-- TODO -->
             <h5 class="modal-title" id="signUp2ModalTitle">
               Wow! You got a great high score!<br>
               Sign up or Login to save it!
@@ -543,28 +545,28 @@
     </div>
     <!-- Modal Ends -->
 
-    <!-- Please Subscribe Modal-->
+    <!-- Subscribe Modal-->
     <!-- Modal -->
     <div class="modal fade" id="modalSubscribe" tabindex="-1" role="dialog" aria-labelledby="modalSubscribeTitle"
       aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="modalSubscribeTitle">
-              Subscribe to get 10 more spins!
-            </h5>
-    
+            <img class="logo__modal" src="./img/logo_no_8_most_votes.png" alt="Brain spin logo">
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body display__flex">
-            <p>Subscribe to Casino Newsletter
-              and get 10 more spins for BRAIN SPIN
-              and other 🎁 within the whole Casino platform!</p>
-            <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp"
+            <img class="img__spin-tickets" src="./img/spin5.svg" alt="Picture of 3 tickets to play brain spin">
+            <h3 class="modal-subtitle">Get <span class="nr--large">5</span> more spins!</h3>
+            <p id="welcomeText">
+              Subscribe to Casino Newsletter
+              and get 5 more spins for BRAIN SPIN
+              and other 🎁 within the whole Casino platform!
+            </p>
+            <input type="email" class="form-control input__border--pink" id="inputEmail" aria-describedby="emailHelp"
               placeholder="Enter email" />
-            <img class="img--small" src="./img/slots/brain-fork.png" alt="Brain on a fork">
           </div>
           <div class="modal-footer">
             <button id="btnCancelSubscribeModal" type="button" class="btn btn-outline-secondary">No thanks!</button>
