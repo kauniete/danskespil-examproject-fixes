@@ -43,7 +43,7 @@ let isModalWelcomeNewSeen = false;
 let user = {
   username: "",
   email: "",
-  spins: 5,
+  spins: 3,
   score: 1000
 };
 
@@ -51,12 +51,12 @@ let leaderboardNames = document.querySelector("#leaderboardNames");
 let leaderboardScores = document.querySelector("#leaderboardScores");
 
 // INIT
-
 window.addEventListener("DOMContentLoaded", init());
 
 function init() {
   checkSpins();
   getTopPlayersOnce();
+
   // Event listeners
   formEl.addEventListener("submit", onSignup);
   formSignInEl.addEventListener("submit", onSignin);
@@ -99,7 +99,6 @@ function init() {
 function checkSpins() {
   setTimeout(() => {
     if (user.spins < 1) {
-      console.log("Sup man");
       document.querySelector(".playFancy").classList.add("disabled");
     } else {
       document.querySelector(".playFancy").classList.remove("disabled");
@@ -109,7 +108,7 @@ function checkSpins() {
 function subscribeGuest(e) {
   e.preventDefault();
   user.email = emailInputModalEl.value;
-  user.spins = user.spins + 10;
+  user.spins = user.spins + 5;
 
   // $(".playFancy").removeClass("disabled");
   spinsAmountEl.textContent = user.spins;
@@ -171,6 +170,7 @@ function spin() {
     updateUser(user.uid, user);
   }
 }
+
 // Modals
 function setOpenedModal(modalId) {
   openedModalId = modalId;
@@ -187,8 +187,7 @@ function welcomeUser(user) {
     if (!user.username && !isModalWelcomeNewSeen) {
       isModalWelcomeNewSeen = true;
       $("#modalWelcomeNew").modal("show");
-      user.spins = 5; // TODO: change this to 5 or 3 for production
-
+      user.spins = 3;
       console.log("welcome: ", user);
     } else if (user.email) {
       console.log("User online: ", user);
@@ -201,14 +200,16 @@ function welcomeUser(user) {
           "Today: ",
           today
         );
-        document.getElementById(
-          "modalWelcomeNewTitle"
-        ).innerHTML = `Welcome back to Casino, ${user.username}!`;
+        document.querySelector(
+          "#modalWelcomeNew .modal-subtitle"
+        ).innerHTML = `Welcome back to Casino, <span class="nr--large">${
+          user.username
+        }</snap>!`;
         document.getElementById(
           "welcomeText"
-        ).innerHTML = `Here is a welcome back 🎁<br>take 20 free spins to play the BRAIN SPIN game!<br>Good luck!`;
+        ).innerHTML = `Here is a welcome back 🎁<br>take 15 free spins to play the BRAIN SPIN game!<br>Good luck!`;
         $("#modalWelcomeNew").modal("show");
-        user.spins = user.spins + 20;
+        user.spins = user.spins + 15;
         user.lastLogin = today;
       }
       user.lastLogin = today;
@@ -480,10 +481,10 @@ function getCurrentUsersPlace(currentUser) {
     lead.style.padding = "4px";
     lead.style.backgroundColor = "rgba(255, 255, 255, 0.3)";
     lead.style.width = "100%";
-// sdfghjklkjhgfdfghjkl;lkjhgffghjklkjhgfghjklkjhgc
+    // sdfghjklkjhgfdfghjkl;lkjhgffghjklkjhgfghjklkjhgc
     let leadScore = document.createElement("li");
     let textScore = document.createTextNode(user.score);
-    
+
     leadScore.appendChild(textScore);
     leadScore.style.padding = "4px";
     leadScore.style.backgroundColor = "rgba(255, 255, 255, 0.3)";

@@ -1,24 +1,64 @@
+/* General */
 .display__flex {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
+.input__border--pink {
+  border: solid 1px #ff2f8d;
+}
+
+/* Modal Header */
+.modal-header {
+  border-bottom: none;
+}
+
+/* Modal Footer */
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Buttons */
 .btn__base {
-    font-weight: 600;
+  min-width: 100px;
+  font-weight: 600;
 }
 .btn--pink {
-    background-color: #ec3a7b;
-    border: #ec3a7b;
+  background-color: #ff2f8d;
+  border: #ff2f8d;
 }
 
-/* Greeting the USer */
+/* Greeting the User */
 #greetingUser {
-    display: none;
+  display: none;
+}
+.logo__modal {
+  width: 60px;
 }
 .img--small {
-    width: 100px;
+  width: 100px;
+}
+.img__spin-tickets {
+  width: 220px;
+}
+.modal-subtitle {
+  text-align: center;
+  font-weight: 900;
+  font-size: 32px;
+  color: #ff2f8d;
+}
+.nr--large {
+  font-weight: 900;
+  font-size: 40px;
+}
+#welcomeText {
+  text-align: center;
+  color: #021f2e;
+}
 
+/*  */
+#modalSignIn {
 }
