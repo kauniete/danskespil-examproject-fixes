@@ -91,7 +91,7 @@ function init() {
   });
 
   let introSound = document.getElementById("myAudioIntro");
-  introSound.volume = 0.35;
+  introSound.volume = 0.25;
   introSound.play();
 }
 
@@ -99,6 +99,7 @@ function init() {
 function checkSpins() {
   setTimeout(() => {
     if (user.spins < 1) {
+      spinsAmountEl.innerHTML = "0";
       document.querySelector(".playFancy").classList.add("disabled");
     } else {
       document.querySelector(".playFancy").classList.remove("disabled");
@@ -204,7 +205,7 @@ function welcomeUser(user) {
           "#modalWelcomeNew .modal-subtitle"
         ).innerHTML = `Welcome back to Casino, <span class="nr--large">${
           user.username
-        }</snap>!`;
+          }</snap>!`;
         document.getElementById(
           "welcomeText"
         ).innerHTML = `Here is a welcome back 🎁<br>take 15 free spins to play the BRAIN SPIN game!<br>Good luck!`;
@@ -229,7 +230,10 @@ function subscribeModalOpen() {
 }
 
 function outOfSpinsModalOpen() {
+  $(".playFancy").addClass("disabled");
   $("#modalOutOfSpins").modal("show");
+  $(".playFancy").addClass("disabled");
+
 }
 
 // SUBSCRIBE section
@@ -367,8 +371,8 @@ function getTopPlayersOnce() {
   //Reference to the collection
   userRef = db.collection("users");
   var query = userRef.orderBy("score", "desc").limit(9);
-  query.get().then(function(querySnapshot) {
-    querySnapshot.forEach(function(doc) {
+  query.get().then(function (querySnapshot) {
+    querySnapshot.forEach(function (doc) {
       let lead = document.createElement("li");
       let text = document.createTextNode(counter + ".  " + doc.data().username);
       lead.appendChild(text);
@@ -399,8 +403,8 @@ function getPlayers(currentUser) {
 
   //orders the data by score, from top to bottom and the return is limited to 9
   var query = userRef.orderBy("score", "desc").limit(9);
-  query.get().then(function(querySnapshot) {
-    querySnapshot.forEach(function(doc) {
+  query.get().then(function (querySnapshot) {
+    querySnapshot.forEach(function (doc) {
       //Check if the current user has one of the top 9 scores
       if (doc.data().username == currentUser) {
         inLead = true;
@@ -497,8 +501,8 @@ function getCurrentUsersPlace(currentUser) {
   } else {
     //not limit to the order since we want to find the current users positioning
     var query = userRef.orderBy("score", "desc");
-    query.get().then(function(querySnapshot) {
-      querySnapshot.forEach(function(doc) {
+    query.get().then(function (querySnapshot) {
+      querySnapshot.forEach(function (doc) {
         //increases the counter each loop, to see how many loops went by until the current user appears
         //a workaround because firebase apparently can't find the position of data in the database
         counter++;

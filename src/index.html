@@ -1,765 +1,682 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<!-- Open Graph / Facebook -->
-<meta property="og:site_name" content="Brainspin">
-<meta property="og:type" content="website">
-<meta property="og:url" content="http://guckimonster.de/kea3/brainspin/src/index.html">
-<meta property="og:title" content="Brainspin">
-<meta property="og:description" content="Play Brainspin too! It is a fun slot machine game ">
-<meta property="og:image" content="http://guckimonster.de/kea3/weppage_image.png">
-<meta property="og:image:width" content="791">
-<meta property="og:image:height" content="424">
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image">
-<meta property="twitter:url" content="http://guckimonster.de/kea3/brainspin/src/index.html">
-<meta property="twitter:title" content="Brainspin">
-<meta property="twitter:description" content="Play Brainspin! ">
-<meta property="twitter:image" content="http://guckimonster.de/kea3/weppage_image.png">
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Open Graph / Facebook -->
+  <meta property="og:site_name" content="Brainspin">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://guckimonster.de/kea3/brainspin/src/index.html">
+  <meta property="og:title" content="Brainspin">
+  <meta property="og:description" content="Play Brainspin too! It is a fun slot machine game ">
+  <meta property="og:image" content="http://guckimonster.de/kea3/weppage_image.png">
+  <meta property="og:image:width" content="791">
+  <meta property="og:image:height" content="424">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      media="screen"
-      href="css/styles.css"
-    />
-        <link rel="stylesheet" type="text/css" media="screen" href="css/modals.css" />
-    <title>Danske Spil Casino: Home</title>
-  </head>
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="http://guckimonster.de/kea3/brainspin/src/index.html">
+  <meta property="twitter:title" content="Brainspin">
+  <meta property="twitter:description" content="Play Brainspin! ">
+  <meta property="twitter:image" content="http://guckimonster.de/kea3/weppage_image.png">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <body>
-      <nav class="navbar navbar-expand-md navbar-dark">
-        <div class="link ">
-          <h6 id="greetingUser">Hello, <span id="userName">User</span>!</h6>
-          <button id="btn-login" class="btn btn-link" onclick="setOpenedModal('#modalSignIn')" data-toggle="modal"
-            data-target="#modalSignIn">
-            Log in
-          </button>
-          <h6 id="greetingUser">Hello, <span id="userName">User</span>!</h6>
-          <button id="logout" class="btn btn-link" type="submit">
-            Log out
-          </button>
-        </div>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/styles.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="css/modals.css" />
+  <title>Danske Spil Casino: Home</title>
+</head>
 
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarsExample04"
-            aria-controls="navbarsExample04"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon">
-             
-          </button>
-          <a class="navbar-brand" ><img class="logo" src="img/logo.jpg"></a>
-          
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <div class="link ">
+      <h6 id="greetingUser">Hello, <span id="userName">User</span>!</h6>
+      <button id="btn-login" class="btn btn-link" onclick="setOpenedModal('#modalSignIn')" data-toggle="modal"
+        data-target="#modalSignIn">
+        Log in
+      </button>
+      <h6 id="greetingUser">Hello, <span id="userName">User</span>!</h6>
+      <button id="logout" class="btn btn-link" type="submit">
+        Log out
+      </button>
+    </div>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample04"
+      aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon">
+
+    </button>
+    <a class="navbar-brand"><img class="logo" src="img/logo.jpg"></a>
 
 
-          <div class="collapse navbar-collapse" id="navbarsExample04">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#"
-                  >Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="http://ggrdesign.com/KEA/3sem/danskespil-users/" target="_blank">Admin panel</a>
-              <li class="nav-item">
-                <a class="nav-link" href="https://casino.danskespil.dk/da?intcmp=top_menu_casino_brand" target="_blank">Casino homepage</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
 
-        <main>
-  
-          <section id="game">
-              <p class="intro">
-                  Casino offers tons of state-of-art roullette, blackjack and slot machine
-                  games.<br>Our jackpot prizes are worth going for!
-              </p>
-              <!-- GAME -->
-              <div id="brainSpin">
-                <div class="grid-container">
-                  <div class="fullGame">
-                      <div class="contentWrapper">
-                    <div class="gameHeader">
-                      <div class="headerWrapper">
-                        <div class="spinAmount">
-                          <span class="wordSpins">Spins:</span>
-                          <span class="playerScore" id=spinAmount>3</span>
-                        </div>
-                      </div>
-                        <div class="gameLogo">
-                          <img class="gamelogo"
-                          src="img/logo_no_8_most_votes.png" 
-                          alt="logo" 
-                          class="gameLogo"></div>
-                          <div class="headerWrapper">
-                        <div class="ourScore">
-                          <span class="wordScore">Score:</span>
-                          <span class="playerScore" id="PlayerScore">1000</span>
-                        </div>
-                      </div>
-                    </div>
-                    
-                  <div class="theGame">
-                    <div class="leftSide">
-                    <div class="fancy">
-                      <ul 
-                      class="slot firstSlot" 
-                      id="machine">
-                        <li><img src="img/slot1.png" class="zombie brain" /></li>
-                        <li><img src="img/slot3.png" class="zombie" /></li>
-                        <li><img src="img/slot4.png" class="zombie" /></li>
-                        <li><img src="img/slot5.png" class="zombie" /></li>
-                        <li><img src="img/slot6.png" class="zombie" /></li>
-                        <li><img src="img/slot7.png" class="zombie" /></li>
-                        <li><img src="img/slot8.png" class="zombie" /></li>
-                        <li><img src="img/slot9.png" class="zombie" /></li>
-                        <li><img src="img/slot10.png" class="zombie" /></li>
-                        <li><img src="img/slot11.png" class="zombie" /></li>
-                        <li><img src="img/slot12.png" class="zombie" /></li>
-                      </ul>
-                      <ul class="slot secondSlot" id="machine">
-                        <li><img src="img/slot1.png" class="zombie brain" /></li>
-                        <li><img src="img/slot3.png" class="zombie" /></li>
-                        <li><img src="img/slot4.png" class="zombie" /></li>
-                        <li><img src="img/slot5.png" class="zombie" /></li>
-                        <li><img src="img/slot6.png" class="zombie" /></li>
-                        <li><img src="img/slot7.png" class="zombie" /></li>
-                        <li><img src="img/slot8.png" class="zombie" /></li>
-                        <li><img src="img/slot9.png" class="zombie" /></li>
-                        <li><img src="img/slot10.png" class="zombie" /></li>
-                        <li><img src="img/slot11.png" class="zombie" /></li>
-                        <li><img src="img/slot12.png" class="zombie" /></li>
-                      </ul>
-                      <ul class="slot thirdSlot" id="machine">
-                        <li><img src="img/slot1.png" class="zombie brain" /></li>
-                        <li><img src="img/slot3.png" class="zombie" /></li>
-                        <li><img src="img/slot4.png" class="zombie" /></li>
-                        <li><img src="img/slot5.png" class="zombie" /></li>
-                        <li><img src="img/slot6.png" class="zombie" /></li>
-                        <li><img src="img/slot7.png" class="zombie" /></li>
-                        <li><img src="img/slot8.png" class="zombie" /></li>
-                        <li><img src="img/slot9.png" class="zombie" /></li>
-                        <li><img src="img/slot10.png" class="zombie" /></li>
-                        <li><img src="img/slot11.png" class="zombie" /></li>
-                        <li><img src="img/slot12.png" class="zombie" /></li>
-                      </ul>
-                      <button id="btnSpin" class="playFancy">Spin</button>
-                    </div>
+    <div class="collapse navbar-collapse" id="navbarsExample04">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="http://ggrdesign.com/KEA/3sem/danskespil-users/" target="_blank">Admin panel</a>
+        <li class="nav-item">
+          <a class="nav-link" href="https://casino.danskespil.dk/da?intcmp=top_menu_casino_brand" target="_blank">Casino
+            homepage</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <section id="game">
+      <p class="intro">
+        Casino offers tons of state-of-art roullette, blackjack and slot machine
+        games.<br>Our jackpot prizes are worth going for!
+      </p>
+      <!-- GAME -->
+      <div id="brainSpin">
+        <div class="grid-container">
+          <div class="fullGame">
+            <div class="contentWrapper">
+              <div class="gameHeader">
+                <div class="headerWrapper">
+                  <div class="spinAmount">
+                    <span class="wordSpins">Spins:</span>
+                    <span class="playerScore" id=spinAmount>3</span>
                   </div>
-                    <div class="rightSide">
-                      <div class="rightSideInner">
-                      <div class="winningDiv">
-                        <span class="wordWin">WIN</span>
-                        
-                        <span class="playerScore" id="winScore">0</span>
+                </div>
+                <div class="gameLogo">
+                  <img class="gamelogo" src="img/logo_no_8_most_votes.png" alt="logo" class="gameLogo"></div>
+                <div class="headerWrapper">
+                  <div class="ourScore">
+                    <span class="wordScore">Score:</span>
+                    <span class="playerScore" id="PlayerScore">1000</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="theGame">
+                <div class="leftSide">
+                  <div class="fancy">
+                    <ul class="slot firstSlot" id="machine">
+                      <li><img src="img/slot1.png" class="zombie brain" /></li>
+                      <li><img src="img/slot3.png" class="zombie" /></li>
+                      <li><img src="img/slot4.png" class="zombie" /></li>
+                      <li><img src="img/slot5.png" class="zombie" /></li>
+                      <li><img src="img/slot6.png" class="zombie" /></li>
+                      <li><img src="img/slot7.png" class="zombie" /></li>
+                      <li><img src="img/slot8.png" class="zombie" /></li>
+                      <li><img src="img/slot9.png" class="zombie" /></li>
+                      <li><img src="img/slot10.png" class="zombie" /></li>
+                      <li><img src="img/slot11.png" class="zombie" /></li>
+                      <li><img src="img/slot12.png" class="zombie" /></li>
+                    </ul>
+                    <ul class="slot secondSlot" id="machine">
+                      <li><img src="img/slot1.png" class="zombie brain" /></li>
+                      <li><img src="img/slot3.png" class="zombie" /></li>
+                      <li><img src="img/slot4.png" class="zombie" /></li>
+                      <li><img src="img/slot5.png" class="zombie" /></li>
+                      <li><img src="img/slot6.png" class="zombie" /></li>
+                      <li><img src="img/slot7.png" class="zombie" /></li>
+                      <li><img src="img/slot8.png" class="zombie" /></li>
+                      <li><img src="img/slot9.png" class="zombie" /></li>
+                      <li><img src="img/slot10.png" class="zombie" /></li>
+                      <li><img src="img/slot11.png" class="zombie" /></li>
+                      <li><img src="img/slot12.png" class="zombie" /></li>
+                    </ul>
+                    <ul class="slot thirdSlot" id="machine">
+                      <li><img src="img/slot1.png" class="zombie brain" /></li>
+                      <li><img src="img/slot3.png" class="zombie" /></li>
+                      <li><img src="img/slot4.png" class="zombie" /></li>
+                      <li><img src="img/slot5.png" class="zombie" /></li>
+                      <li><img src="img/slot6.png" class="zombie" /></li>
+                      <li><img src="img/slot7.png" class="zombie" /></li>
+                      <li><img src="img/slot8.png" class="zombie" /></li>
+                      <li><img src="img/slot9.png" class="zombie" /></li>
+                      <li><img src="img/slot10.png" class="zombie" /></li>
+                      <li><img src="img/slot11.png" class="zombie" /></li>
+                      <li><img src="img/slot12.png" class="zombie" /></li>
+                    </ul>
+                    <button id="btnSpin" class="playFancy">Spin</button>
+                  </div>
+                </div>
+                <div class="rightSide">
+                  <div class="rightSideInner">
+                    <div class="winningDiv">
+                      <span class="wordWin">WIN</span>
+
+                      <span class="playerScore" id="winScore">0</span>
+                    </div>
+                    <div class="tabs">
+                      <div class="topPlayers" onclick="openPage('topPlayers', this, )" id="defaultOpen">Top Players
                       </div>
-                      <div class="tabs">
-                          <div class="topPlayers" onclick="openPage('topPlayers', this, )" id="defaultOpen">Top Players</div>
-                          <button class="combos" onclick="openPage('brainCombos', this, )" >Combos</button>
-                      </div>
-                      <div id="topPlayers" class="tabcontent">
+                      <button class="combos" onclick="openPage('brainCombos', this, )">Combos</button>
+                    </div>
+                    <div id="topPlayers" class="tabcontent">
                       <div class="topList">
-                    <ul id="leaderboardNames"></ul>
-                    <ul id="leaderboardScores"></ul>
-                        </div>
+                        <ul id="leaderboardNames"></ul>
+                        <ul id="leaderboardScores"></ul>
+                      </div>
                     </div>
                     <div id="brainCombos" class="tabcontent">
-                   <div class="comboList">
+                      <div class="comboList">
                         <p id="comboheading1" class="comboheading">1x brain</p>
-                        <div id="onebrain"><img src="img/slots/brain.png" alt="brain"><p>+500</p></div>
+                        <div id="onebrain"><img src="img/slots/brain.png" alt="brain">
+                          <p>+500</p>
+                        </div>
                         <p class="comboheading">2x brains</p>
-                        <div id="twobrains"><img src="img/slots/brain.png" alt="brain"><img src="img/slots/brain.png" alt="brain"><p>+1000</p></div>
+                        <div id="twobrains"><img src="img/slots/brain.png" alt="brain"><img src="img/slots/brain.png"
+                            alt="brain">
+                          <p>+1000</p>
+                        </div>
                         <p class="comboheading">3x brains</p>
-                        <div id="threebrains"><img src="img/slots/brain.png" alt="brain"><img src="img/slots/brain.png" alt="brain"><img src="img/slots/brain.png" alt="brain"><p>+1500</p></div>
+                        <div id="threebrains"><img src="img/slots/brain.png" alt="brain"><img src="img/slots/brain.png"
+                            alt="brain"><img src="img/slots/brain.png" alt="brain">
+                          <p>+1500</p>
+                        </div>
                         <p class="comboheading">4x brains</p>
-                        <div id="fourbrains"><img src="img/slots/brain.png" alt="brain"><img src="img/slots/brain.png" alt="brain"><img src="img/slots/brain.png" alt="brain"><img src="img/slots/brain.png" alt="brain"><p>+2000</p></div>
+                        <div id="fourbrains"><img src="img/slots/brain.png" alt="brain"><img src="img/slots/brain.png"
+                            alt="brain"><img src="img/slots/brain.png" alt="brain"><img src="img/slots/brain.png"
+                            alt="brain">
+                          <p>+2000</p>
+                        </div>
                         <p class="comboheading">5x brains</p>
-                        <div id="fivebrains"><img src="img/slots/brain.png" alt="brain"><img src="img/slots/brain.png" alt="brain"><img src="img/slots/brain.png" alt="brain"><img src="img/slots/brain.png" alt="brain"><img src="img/slots/brain.png" alt="brain"><p>+2500</p></div>
+                        <div id="fivebrains"><img src="img/slots/brain.png" alt="brain"><img src="img/slots/brain.png"
+                            alt="brain"><img src="img/slots/brain.png" alt="brain"><img src="img/slots/brain.png"
+                            alt="brain"><img src="img/slots/brain.png" alt="brain">
+                          <p>+2500</p>
+                        </div>
                       </div>
-                 
-                  </div>
+
                     </div>
-                   
                   </div>
-                  </div>
-                </div>
-              </div>
-              </div>
-              </div>
-              <img id="rabbit_desk" src="img/slots/rabbit.png" alt="rabbit">
-              <img id="joker_desk" src="img/slots/joker.png" alt="joker">
-          </section>
-          <section id="socialmedia">
 
-
-            <!--Share links; Genrated from here: https://css-tricks.com/simple-social-sharing-links/-->
-            <p>Share the fun with friends</p>
-              <div id="socialmediaIcons">            
-                 <a href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fguckimonster.de%2Fkea3%2Fbrainspin%2Findex.html" target="_blank"><i id="facebookicon" class="fa fa-facebook-square"></i></a>
-                 <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fguckimonster.de%2Fkea3%2Fbrainspin%2Findex.html&text=Hi%20Friends%20%3A)%20this%20game%20is%20tons%20of%20fun%2C%20you%20should%20definitely%20join%20me!%20" target="_blank"><i id="twittericon" class="fa fa-twitter-square"></i></a>
-              </div>
-          </section>
-            <section id="subscribefield">
-              <p>Subscribe to win prizes and to see our latest news</p>
-      
-              <div id="subscribebox">
-                <input type="email" name="email" id="emailSubscribe" placeholder="Email address" />
-                <button>Subscribe</button>
-              </div>
-            </section>
-            <section id="othergames">
-              <h1>Featured Casino Game</h1>
-              <div id="underline"></div>
-             <div id="imagecontainer">
-              <a href=" https://casino.danskespil.dk/da" target="_blank">         
-                <img
-                id="arcadeBomb"
-                src="img/casino-games/arcade_bomb.jpg"
-                alt="arcade_bomb"
-              />
-            </a>
-  
-            <a href=" https://casino.danskespil.dk/da" target="_blank">     
-               <img
-              id="blackKnight"
-              src="img/casino-games/black_knight.jpg"
-              alt="black_knight"
-            />    
-          </a>
-            <a href=" https://casino.danskespil.dk/da" target="_blank">      
-              <img
-              id="cashVandal"
-              src="img/casino-games/cash_vandal.jpg"
-              alt="cash_vandal"
-            />     
-          </a>
-            <a href=" https://casino.danskespil.dk/da" target="_blank">        
-              <img
-              id="ecuadorGold"
-              src="img/casino-games/ecuador_gold.jpg"
-              alt="ecuador_gold"
-            />    
-          </a>
-            <a href=" https://casino.danskespil.dk/da" target="_blank">         
-              <img
-              id="crazyGenie"
-              src="img/casino-games/crazy_genie.jpg"
-              alt="crazy_genie"
-            />   
-          </a>
-            <a href=" https://casino.danskespil.dk/da" target="_blank">   
-               <img
-              id="grandWheel"
-              src="img/casino-games/grand_wheel.jpg"
-              alt="grand_wheel"
-            />      
-          </a>
-            <a href=" https://casino.danskespil.dk/da" target="_blank">      
-              <img
-              id="cinderellasBall"
-              src="img/casino-games/cinderellas_ball.jpg"
-              alt="cinderellas_ball"
-            />    
-          </a>
-            <a href=" https://casino.danskespil.dk/da" target="_blank">       
-              <img
-              id="holyDiver"
-              src="img/casino-games/holy_diver.jpg"
-              alt="holy_diver"
-            />    
-          </a>
-            <a href=" https://casino.danskespil.dk/da" target="_blank">    
-              <img id="chi" src="img/casino-games/chi.jpg" alt="chi" />     
-            </a>
-            <a href=" https://casino.danskespil.dk/da" target="_blank">         
-              <img
-              id="irishFrenzy"
-              src="img/casino-games/irish_frenzy.jpg"
-              alt="irish frenzy"
-            />     
-          </a>
-  
-             </div>
-             <a id="casinolink" href="https://casino.danskespil.dk/da" target="_blank"
-             >Visit The Full Casino Website</a
-           >
-            </section>
-        
-          </main>
-          <footer>
-            <img src="img/logo_danskespil.jpg" alt="danske spil logo" />
-            <div id="table" style="display: table;">
-              <div style="display: table-row;">
-                <div class="column" style="display: table-cell;">
-                 Danske Spil A/S <br>
-                 Korsdalvej 135<br>
-              2605 Brønby
-                </div>
-                <div class="column" style="display: table-cell;">
-                  <a href="https://danskespil.dk/regler--a--vilkaar/vilkaar/cookies?_ga=2.259146058.1725395526.1559221924-399674715.1559221924" target="_blank">Cookies</a> <br>
-                  <a href="https://danskespil.dk/regler--a--vilkaar/regler/spilleregler-dli?_ga=2.259146058.1725395526.1559221924-399674715.1559221924" target="_blank">Rules for playing</a> <br>
-                  <a href="https://danskespil.dk/regler--a--vilkaar/vilkaar/vinderchancer?_ga=2.259146058.1725395526.1559221924-399674715.1559221924" target="_blank">Chances for winning</a>
-                </div>
-                <div class="column" style="display: table-cell;">
-                  <p>Contact Customer Service every day 9-23</p>
-                  <a id="customerservice" href="https://kundecenter.danskespil.dk/?_ga=2.259146058.1725395526.1559221924-399674715.1559221924" target="_blank">Contact</a>
                 </div>
               </div>
             </div>
-          </footer>
-  
-    
-    <!-- Sign In Modal-->
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="modalSignIn"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="modalSignInCenterTitle"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalSignInCenterTitle">
-              Login
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form id="form-popup-signin">
-              <div class="form-group">
-                <label for="inputEmail1">Email address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="inputEmail1"
-                  aria-describedby="emailHelp"
-                  placeholder="Enter email"
-                />
-              </div>
-              <div class="form-group">
-                <label for="inputPassword1">Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="inputPassword1"
-                  placeholder="Password"
-                />
-              </div>
-
-              <div class="modal-footer">
-                <button onclick="closePreviousModal('#exampleModalCenter')" type="button" class="btn btn-outline-secondary btn__base" data-toggle="modal" data-target="#exampleModalCenter">
-                  Create an Account
-                </button>
-                <button type="submit" class="btn btn-primary btn__base btn--pink">Login</button>
-              </div>
-            </form>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Modal Ends -->
+      <img id="rabbit_desk" src="img/slots/rabbit.png" alt="rabbit">
+      <img id="joker_desk" src="img/slots/joker.png" alt="joker">
+    </section>
+    <section id="socialmedia">
 
-    <!-- Sign Up Modal-->
-    <!-- Modal -->
-    <div
-      class="modal fade"
-      id="exampleModalCenter"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalCenterTitle"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalCenterTitle">
-              Sign up to collect the freebies and to save your score in games!
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form id="form-popup-signup">
-              <div class="form-group">
-                <label for="exampleInputUsername">Username</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="exampleInputUsername"
-                  placeholder="Enter your username"
-                />
 
-                <label for="exampleInputEmail1">Email address</label>
-                <input
-                  type="email"
-                  class="form-control"
-                  id="exampleInputEmail1"
-                  aria-describedby="emailHelp"
-                  placeholder="Enter email"
-                />
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input
-                  type="password"
-                  class="form-control"
-                  id="exampleInputPassword1"
-                  placeholder="Password"
-                />
-              </div>
+      <!--Share links; Genrated from here: https://css-tricks.com/simple-social-sharing-links/-->
+      <p>Share the fun with friends</p>
+      <div id="socialmediaIcons">
+        <a href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Fguckimonster.de%2Fkea3%2Fbrainspin%2Findex.html"
+          target="_blank"><i id="facebookicon" class="fa fa-facebook-square"></i></a>
+        <a href="https://twitter.com/intent/tweet?url=http%3A%2F%2Fguckimonster.de%2Fkea3%2Fbrainspin%2Findex.html&text=Hi%20Friends%20%3A)%20this%20game%20is%20tons%20of%20fun%2C%20you%20should%20definitely%20join%20me!%20"
+          target="_blank"><i id="twittericon" class="fa fa-twitter-square"></i></a>
+      </div>
+    </section>
+    <section id="subscribefield">
+      <p>Subscribe to win prizes and to see our latest news</p>
 
-              <div class="modal-footer">
-                <button onclick="closePreviousModal('#modalSignIn')" type="button" class="btn btn-outline-secondary btn__base" data-toggle="modal" data-target="#modalSignIn">
-                  Already Have an Account
-                </button>
-                <button type="submit" class="btn btn-primary btn__base btn--pink">
-                  Sign Up Now
-                </button>
-              </div>
-            </form>
-          </div>
+      <div id="subscribebox">
+        <input type="email" name="email" id="emailSubscribe" placeholder="Email address" />
+        <button>Subscribe</button>
+      </div>
+    </section>
+    <section id="othergames">
+      <h1>Featured Casino Game</h1>
+      <div id="underline"></div>
+      <div id="imagecontainer">
+        <a href=" https://casino.danskespil.dk/da" target="_blank">
+          <img id="arcadeBomb" src="img/casino-games/arcade_bomb.jpg" alt="arcade_bomb" />
+        </a>
+
+        <a href=" https://casino.danskespil.dk/da" target="_blank">
+          <img id="blackKnight" src="img/casino-games/black_knight.jpg" alt="black_knight" />
+        </a>
+        <a href=" https://casino.danskespil.dk/da" target="_blank">
+          <img id="cashVandal" src="img/casino-games/cash_vandal.jpg" alt="cash_vandal" />
+        </a>
+        <a href=" https://casino.danskespil.dk/da" target="_blank">
+          <img id="ecuadorGold" src="img/casino-games/ecuador_gold.jpg" alt="ecuador_gold" />
+        </a>
+        <a href=" https://casino.danskespil.dk/da" target="_blank">
+          <img id="crazyGenie" src="img/casino-games/crazy_genie.jpg" alt="crazy_genie" />
+        </a>
+        <a href=" https://casino.danskespil.dk/da" target="_blank">
+          <img id="grandWheel" src="img/casino-games/grand_wheel.jpg" alt="grand_wheel" />
+        </a>
+        <a href=" https://casino.danskespil.dk/da" target="_blank">
+          <img id="cinderellasBall" src="img/casino-games/cinderellas_ball.jpg" alt="cinderellas_ball" />
+        </a>
+        <a href=" https://casino.danskespil.dk/da" target="_blank">
+          <img id="holyDiver" src="img/casino-games/holy_diver.jpg" alt="holy_diver" />
+        </a>
+        <a href=" https://casino.danskespil.dk/da" target="_blank">
+          <img id="chi" src="img/casino-games/chi.jpg" alt="chi" />
+        </a>
+        <a href=" https://casino.danskespil.dk/da" target="_blank">
+          <img id="irishFrenzy" src="img/casino-games/irish_frenzy.jpg" alt="irish frenzy" />
+        </a>
+
+      </div>
+      <a id="casinolink" href="https://casino.danskespil.dk/da" target="_blank">Visit The Full Casino Website</a>
+    </section>
+
+  </main>
+  <footer>
+    <img src="img/logo_danskespil.jpg" alt="danske spil logo" />
+    <div id="table" style="display: table;">
+      <div style="display: table-row;">
+        <div class="column" style="display: table-cell;">
+          Danske Spil A/S <br>
+          Korsdalvej 135<br>
+          2605 Brønby
+        </div>
+        <div class="column" style="display: table-cell;">
+          <a href="https://danskespil.dk/regler--a--vilkaar/vilkaar/cookies?_ga=2.259146058.1725395526.1559221924-399674715.1559221924"
+            target="_blank">Cookies</a> <br>
+          <a href="https://danskespil.dk/regler--a--vilkaar/regler/spilleregler-dli?_ga=2.259146058.1725395526.1559221924-399674715.1559221924"
+            target="_blank">Rules for playing</a> <br>
+          <a href="https://danskespil.dk/regler--a--vilkaar/vilkaar/vinderchancer?_ga=2.259146058.1725395526.1559221924-399674715.1559221924"
+            target="_blank">Chances for winning</a>
+        </div>
+        <div class="column" style="display: table-cell;">
+          <p>Contact Customer Service every day 9-23</p>
+          <a id="customerservice"
+            href="https://kundecenter.danskespil.dk/?_ga=2.259146058.1725395526.1559221924-399674715.1559221924"
+            target="_blank">Contact</a>
         </div>
       </div>
     </div>
-    <!-- Modal Ends -->
+  </footer>
 
-    <!-- Welcome New User Modal-->
-    <!-- Modal -->
-    <div class="modal fade" id="modalWelcomeNew" tabindex="-1" role="dialog" aria-labelledby="modalSignInCenterTitle"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <img class="logo__modal" src="./img/logo_no_8_most_votes.png" alt="Brain spin logo">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body display__flex">
-            <img class="img__spin-tickets" src="./img/spin3.svg" alt="Picture of 3 tickets to play brain spin">
-            <h3 class="modal-subtitle">You have <span class="nr--large">3</span> spins!</h3>
-            <p id="welcomeText">Here is a welcome 🎁 to you<br>
+
+  <!-- Sign In Modal-->
+  <!-- Modal -->
+  <div class="modal fade" id="modalSignIn" tabindex="-1" role="dialog" aria-labelledby="modalSignInCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalSignInCenterTitle">
+            Login
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="form-popup-signin">
+            <div class="form-group">
+              <label for="inputEmail1">Email address</label>
+              <input type="email" class="form-control" id="inputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email" />
+            </div>
+            <div class="form-group">
+              <label for="inputPassword1">Password</label>
+              <input type="password" class="form-control" id="inputPassword1" placeholder="Password" />
+            </div>
+
+            <div class="modal-footer">
+              <button onclick="closePreviousModal('#exampleModalCenter')" type="button"
+                class="btn btn-outline-secondary btn__base" data-toggle="modal" data-target="#exampleModalCenter">
+                Create an Account
+              </button>
+              <button type="submit" class="btn btn-primary btn__base btn--pink">Login</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Ends -->
+
+  <!-- Sign Up Modal-->
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalCenterTitle">
+            Sign up to collect the freebies and to save your score in games!
+          </h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form id="form-popup-signup">
+            <div class="form-group">
+              <label for="exampleInputUsername">Username</label>
+              <input type="text" class="form-control" id="exampleInputUsername" placeholder="Enter your username" />
+
+              <label for="exampleInputEmail1">Email address</label>
+              <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                placeholder="Enter email" />
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Password</label>
+              <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
+            </div>
+
+            <div class="modal-footer">
+              <button onclick="closePreviousModal('#modalSignIn')" type="button"
+                class="btn btn-outline-secondary btn__base" data-toggle="modal" data-target="#modalSignIn">
+                Already Have an Account
+              </button>
+              <button type="submit" class="btn btn-primary btn__base btn--pink">
+                Sign Up Now
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal Ends -->
+
+  <!-- Welcome New User Modal-->
+  <!-- Modal -->
+  <div class="modal fade" id="modalWelcomeNew" tabindex="-1" role="dialog" aria-labelledby="modalSignInCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img class="logo__modal" src="./img/logo_no_8_most_votes.png" alt="Brain spin logo">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body display__flex">
+          <img class="img__spin-tickets" src="./img/spin3.svg" alt="Picture of 3 tickets to play brain spin">
+          <h3 class="modal-subtitle">You have <span class="nr--large">3</span> spins!</h3>
+          <p id="welcomeText">Here is a welcome 🎁 to you<br>
             take 3 free spins to play the BRAIN SPIN game!<br>
             Good luck!</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary btn__base btn--pink"
-              data-toggle="modal" data-target="#modalWelcomeNew">
-              OK
-            </button>
-          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn__base btn--pink" data-toggle="modal"
+            data-target="#modalWelcomeNew">
+            OK
+          </button>
         </div>
       </div>
     </div>
-    <!-- Modal Ends -->
+  </div>
+  <!-- Modal Ends -->
 
-    <!-- Sounds HTML -->
-    <audio id="myAudioIntro"><source src="sounds/Computer_Start-Up-Your_Mom-1280862923.mp3" type="audio/ogg"></audio>
-    <audio id="myAudio"><source src="sounds/rolling.mp3" type="audio/ogg"></audio>
-    <audio id="myAudioScore"><source src="sounds/Ta Da-SoundBible.com-1884170640.mp3" type="audio/ogg"></audio>
-    <audio id="myAudioLaugh"><source src="sounds/Evil Laugh Male.mp3" type="audio/ogg"></audio>
-    <audio id="myAudioButton"><source src="sounds/Electrical_Sweep-Sweeper-1760111493.mp3" type="audio/ogg"></audio>
-    <audio id="myAudioRico"><source src="sounds/Western Ricochet.mp3" type="audio/ogg"></audio>
+  <!-- Sounds HTML -->
+  <audio id="myAudioIntro">
+    <source src="sounds/Computer_Start-Up-Your_Mom-1280862923.mp3" type="audio/ogg"></audio>
+  <audio id="myAudio">
+    <source src="sounds/rolling.mp3" type="audio/ogg"></audio>
+  <audio id="myAudioScore">
+    <source src="sounds/Ta Da-SoundBible.com-1884170640.mp3" type="audio/ogg"></audio>
+  <audio id="myAudioLaugh">
+    <source src="sounds/Evil Laugh Male.mp3" type="audio/ogg"></audio>
+  <audio id="myAudioButton">
+    <source src="sounds/Electrical_Sweep-Sweeper-1760111493.mp3" type="audio/ogg"></audio>
+  <audio id="myAudioRico">
+    <source src="sounds/Western Ricochet.mp3" type="audio/ogg"></audio>
 
-    <!-- Sign Up ( save score ) Modal-->
-    <!-- Modal -->
-    <div class="modal fade" id="signUp2Modal" tabindex="-1" role="dialog" aria-labelledby="signUp2ModalTitle"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <img class="logo__modal" src="./img/logo_no_8_most_votes.png" alt="Brain spin logo">
+  <!-- Sign Up ( save score ) Modal-->
+  <!-- Modal -->
+  <div class="modal fade" id="signUp2Modal" tabindex="-1" role="dialog" aria-labelledby="signUp2ModalTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img class="logo__modal" src="./img/logo_no_8_most_votes.png" alt="Brain spin logo">
 
-            
-            <!-- TODO -->
-            <h5 class="modal-title" id="signUp2ModalTitle">
-              Wow! You got a great high score!<br>
-              Sign up or Login to save it!
-            </h5>
-            <button id="closeSignupModal2" type="button" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Sign up to save your score and get 15 extra spins now as well as 20 free spins every day!</p>
-            <form id="form-signup">
-              <div class="form-group">
-                <label for="inputUsername">Username</label>
-                <input type="text" class="form-control" id="inputUsername" placeholder="Enter your username" />
-    
-                <label for="inputEmail2">Email address</label>
-                <input type="email" class="form-control" id="inputEmail2" aria-describedby="emailHelp"
-                  placeholder="Enter email" />
-              </div>
-              <div class="form-group">
-                <label for="inputPassword2">Password</label>
-                <input type="password" class="form-control" id="inputPassword2" placeholder="Password" />
-              </div>
-    
-              <div class="modal-footer">
-                <button onclick="closePreviousModal('#modalSignIn')" type="button"
-                  class="btn btn-outline-secondary btn__base" data-toggle="modal" data-target="#modalSignIn">
-                  Already Have an Account
-                </button>
-                <button type="submit" class="btn btn-primary btn__base btn--pink">
-                  Sign Up Now
-                </button>
-              </div>
-            </form>
-          </div>
+
+          <!-- TODO -->
+          <h5 class="modal-title" id="signUp2ModalTitle">
+            Wow! You got a great high score!<br>
+            Sign up or Login to save it!
+          </h5>
+          <button id="closeSignupModal2" type="button" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>Sign up to save your score and get 15 extra spins now as well as 20 free spins every day!</p>
+          <form id="form-signup">
+            <div class="form-group">
+              <label for="inputUsername">Username</label>
+              <input type="text" class="form-control" id="inputUsername" placeholder="Enter your username" />
+
+              <label for="inputEmail2">Email address</label>
+              <input type="email" class="form-control" id="inputEmail2" aria-describedby="emailHelp"
+                placeholder="Enter email" />
+            </div>
+            <div class="form-group">
+              <label for="inputPassword2">Password</label>
+              <input type="password" class="form-control" id="inputPassword2" placeholder="Password" />
+            </div>
+
+            <div class="modal-footer">
+              <button onclick="closePreviousModal('#modalSignIn')" type="button"
+                class="btn btn-outline-secondary btn__base" data-toggle="modal" data-target="#modalSignIn">
+                Already Have an Account
+              </button>
+              <button type="submit" class="btn btn-primary btn__base btn--pink">
+                Sign Up Now
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
-    <!-- Modal Ends -->
+  </div>
+  <!-- Modal Ends -->
 
-    <!-- Subscribe Modal-->
-    <!-- Modal -->
-    <div class="modal fade" id="modalSubscribe" tabindex="-1" role="dialog" aria-labelledby="modalSubscribeTitle"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <img class="logo__modal" src="./img/logo_no_8_most_votes.png" alt="Brain spin logo">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body display__flex">
-            <img class="img__spin-tickets" src="./img/spin5.svg" alt="Picture of 3 tickets to play brain spin">
-            <h3 class="modal-subtitle">Get <span class="nr--large">5</span> more spins!</h3>
-            <p id="welcomeText">
-              Subscribe to Casino Newsletter
-              and get 5 more spins for BRAIN SPIN
-              and other 🎁 within the whole Casino platform!
-            </p>
-            <input type="email" class="form-control input__border--pink" id="inputEmail" aria-describedby="emailHelp"
-              placeholder="Enter email" />
-          </div>
-          <div class="modal-footer">
-            <button id="btnCancelSubscribeModal" type="button" class="btn btn-outline-secondary">No thanks!</button>
-            <button id="btnSubscribeModal" type="submit" class="btn btn-primary btn__base btn--pink" data-toggle="modal"
-              data-target="#modalSubscribe">
-              OK
-            </button>
-          </div>
+  <!-- Subscribe Modal-->
+  <!-- Modal -->
+  <div class="modal fade" id="modalSubscribe" tabindex="-1" role="dialog" aria-labelledby="modalSubscribeTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <img class="logo__modal" src="./img/logo_no_8_most_votes.png" alt="Brain spin logo">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body display__flex">
+          <img class="img__spin-tickets" src="./img/spin5.svg" alt="Picture of 3 tickets to play brain spin">
+          <h3 class="modal-subtitle">Get <span class="nr--large">5</span> more spins!</h3>
+          <p id="welcomeText">
+            Subscribe to Casino Newsletter
+            and get 5 more spins for BRAIN SPIN
+            and other 🎁 within the whole Casino platform!
+          </p>
+          <input type="email" class="form-control input__border--pink" id="inputEmail" aria-describedby="emailHelp"
+            placeholder="Enter email" />
+        </div>
+        <div class="modal-footer">
+          <button id="btnCancelSubscribeModal" type="button" class="btn btn-outline-secondary">No thanks!</button>
+          <button id="btnSubscribeModal" type="submit" class="btn btn-primary btn__base btn--pink" data-toggle="modal"
+            data-target="#modalSubscribe">
+            OK
+          </button>
         </div>
       </div>
     </div>
-    <!-- Modal Ends -->
+  </div>
+  <!-- Modal Ends -->
 
-    <!-- Out of Spins Modal-->
-    <!-- Modal -->
-    <div class="modal fade" id="modalOutOfSpins" tabindex="-1" role="dialog" aria-labelledby="modalSubscribeTitle"
-      aria-hidden="true">
-      <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalOutOfSpinsTitle">
-              Ooops! You are out of spins!
-            </h5>
-    
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body display__flex">
-            <p>Continue having fun with other games on the Casino platform, or come back tomorrow for 10 more free spins!</p>
-          </div>
-          <div class="modal-footer">
-            <button id="btnCancelOutOfSpinsModal" type="button" class="btn btn-primary btn--pink">Go to Lobby</button>
-          </div>
+  <!-- Out of Spins Modal-->
+  <!-- Modal -->
+  <div class="modal fade" id="modalOutOfSpins" tabindex="-1" role="dialog" aria-labelledby="modalSubscribeTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalOutOfSpinsTitle">
+            Ooops! You are out of spins!
+          </h5>
+
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body display__flex">
+          <p>Continue having fun with other games on the Casino platform, or come back tomorrow for 10 more free spins!
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button id="btnCancelOutOfSpinsModal" type="button" class="btn btn-primary btn--pink">Go to Lobby</button>
         </div>
       </div>
     </div>
-    <!-- Modal Ends -->
+  </div>
+  <!-- Modal Ends -->
 
-    <!-- jquery library source -->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-    <!-- jquery easing animation source -->
-    <script
-      src="js/jquery.easing.1.3.js"
-      type="text/javascript"
-      charset="utf-8"
-    ></script>
-    <!-- jSlots library for slot spinning easing animation source -->
-    <script
-      src="js/jquery.jSlots.js"
-      type="text/javascript"
-      charset="utf-8"
-    ></script>
-    <script type="text/javascript" charset="utf-8">
-    let currentScore=0;
-      // slot middle example
+  <!-- jquery library source -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+  <!-- jquery easing animation source -->
+  <script src="js/jquery.easing.1.3.js" type="text/javascript" charset="utf-8"></script>
+  <!-- jSlots library for slot spinning easing animation source -->
+  <script src="js/jquery.jSlots.js" type="text/javascript" charset="utf-8"></script>
+  <script type="text/javascript" charset="utf-8">
+    let currentScore = 0;
+    // slot middle example
 
-      $(".fancy .slot").jSlots({
-        //number of columns
-        number: 5,
-        //winning index 1=our brain
-        winnerNumber: 1,
-        //div id that starts the spin
-        spinner: ".playFancy",
-        //animation type from library
-        easing: "easeOutElastic",
-        //for how long
-        time: 2300,
-        //how fast
-        loops: 5,
-        //when button "spin" is pressed this happens
-        
-        onStart: function() {
-          let winscore=document.querySelector("#winScore");
-          let playercore=document.querySelector("#PlayerScore");
-          let spinsleft=document.querySelector("#spinAmount");
-          spinsleft.classList.add("animate2");
-          playercore.classList.remove("animate1");
-          winscore.classList.remove("animate");
-          $(".playFancy").addClass("faded");
+    $(".fancy .slot").jSlots({
+      //number of columns
+      number: 5,
+      //winning index 1=our brain
+      winnerNumber: 1,
+      //div id that starts the spin
+      spinner: ".playFancy",
+      //animation type from library
+      easing: "easeOutElastic",
+      //for how long
+      time: 2300,
+      //how fast
+      loops: 5,
+      //when button "spin" is pressed this happens
+
+      onStart: function () {
+        let winscore = document.querySelector("#winScore");
+        let playercore = document.querySelector("#PlayerScore");
+        let spinsleft = document.querySelector("#spinAmount");
+        spinsleft.classList.add("animate2");
+        playercore.classList.remove("animate1");
+        winscore.classList.remove("animate");
+        $(".playFancy").addClass("faded");
+        setTimeout(() => {
+          $(".playFancy").addClass("disabled");
+        }, 900);
+
+        let winAmount = document.querySelector("#winScore").innerText;
+        document.querySelector("#winScore").innerText = 0;
+        currentScore = 0;
+        // document.querySelector("#winScore").innerText="Spinning...";
+        let buttonSound = document.getElementById("myAudioButton");
+        // buttonSound.pause(); 
+        // buttonSound.currentTime=0.0;
+        buttonSound.volume = .1;
+        buttonSound.play();
+        let rollingSound = document.getElementById("myAudio");
+        // rollingSound.pause(); 
+        // rollingSound.currentTime=0.0;
+        rollingSound.volume = .1;
+        rollingSound.play();
+      },
+      onEnd: function () {
+        let spinAmount = document.querySelector("#spinAmount").innerText;
+        let spinsleft = document.querySelector("#spinAmount");
+        spinsleft.classList.remove("animate2");
+        setTimeout(() => {
+          $(".playFancy").removeClass("disabled")
+        }, 1500);
+        $(".playFancy").removeClass("faded");
+      },
+
+      //when user gets brain this function starts
+      onWin: function (winCount, winners) {
+        // react to the # of winning slots
+        if (winCount > 0) {
+          currentScore = currentScore + 500 * winCount;
+          console.log(currentScore);
+          // console.log("You got " + winCount +" brains");
+          let winAmount = document.querySelector("#PlayerScore").innerText;
+          let winscore = document.querySelector("#winScore");
+          let playercore = document.querySelector("#PlayerScore");
+
+          winscore.classList.add("animate");
           setTimeout(() => {
-            $(".playFancy").addClass("disabled");
-            }, 900);
+            playercore.classList.add("animate1");
+          }, 1000);
+          // console.log(Number(winAmount));
+          document.querySelector("#PlayerScore").innerText = 500 * winCount + Number(winAmount);
+          document.querySelector("#winScore").innerText = currentScore;
+          let winningSound1 = document.getElementById("myAudioScore");
+          // winningSound1.pause();
+          // winningSound1.currentTime=0.0;
+          winningSound1.volume = .1;
+          winningSound1.play();
+        }
+      }
+    });
 
-          let winAmount=document.querySelector("#winScore").innerText;
-          document.querySelector("#winScore").innerText=0;
-          currentScore=0;
-              // document.querySelector("#winScore").innerText="Spinning...";
-              let buttonSound = document.getElementById("myAudioButton"); 
-              // buttonSound.pause(); 
-              // buttonSound.currentTime=0.0;
-              buttonSound.volume=.1;
-              buttonSound.play(); 
-              let rollingSound = document.getElementById("myAudio");
-              // rollingSound.pause(); 
-              // rollingSound.currentTime=0.0;
-              // rollingSound.volume=.1;
-              rollingSound.play(); 
-        },
-        onEnd: function() {
-          let spinAmount=document.querySelector("#spinAmount").innerText;
-          let spinsleft=document.querySelector("#spinAmount");
-          spinsleft.classList.remove("animate2");
-          setTimeout(() => {
-            $(".playFancy").removeClass("disabled")}, 1500);
-            $(".playFancy").removeClass("faded");
-          },
-
-        //when user gets brain this function starts
-        onWin: function(winCount, winners) {
-          // react to the # of winning slots
-          if (winCount>0) {
-            currentScore=currentScore+500*winCount;
-            console.log(currentScore);
-            // console.log("You got " + winCount +" brains");
-              let winAmount=document.querySelector("#PlayerScore").innerText;
-              let winscore=document.querySelector("#winScore");
-              let playercore=document.querySelector("#PlayerScore");
-              
-              winscore.classList.add("animate");
-              setTimeout(() => {
-                playercore.classList.add("animate1");
-            }, 1000);
-              // console.log(Number(winAmount));
-              document.querySelector("#PlayerScore").innerText=500*winCount+Number(winAmount);
-              document.querySelector("#winScore").innerText=currentScore;
-              let winningSound1 = document.getElementById("myAudioScore"); 
-              // winningSound1.pause();
-              // winningSound1.currentTime=0.0;
-              winningSound1.volume=.2;
-              winningSound1.play(); 
-          }
-        }});
-
-  //Tabs for top players and combos
-  function openPage(pageName,elmnt,color) {
-  let i, tabcontent, tabs;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tabs = document.getElementsByClassName("tabs");
-  for (i = 0; i < tabs.length; i++) {
-    tabs[i].style.backgroundColor = "";
-  }
-  document.getElementById(pageName).style.display = "block";
-  elmnt.style.backgroundColor = color;
-}
+    //Tabs for top players and combos
+    function openPage(pageName, elmnt, color) {
+      let i, tabcontent, tabs;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+      }
+      tabs = document.getElementsByClassName("tabs");
+      for (i = 0; i < tabs.length; i++) {
+        tabs[i].style.backgroundColor = "";
+      }
+      document.getElementById(pageName).style.display = "block";
+      elmnt.style.backgroundColor = color;
+    }
 
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
-        </script>
+  </script>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
 
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+  <!-- TODO: Add SDKs for Firebase products that you want to use
 			https://firebase.google.com/docs/web/setup#config-web-app -->
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-firestore.js"></script>
 
-    <script>
-      var firebaseConfig = {
-        apiKey: "AIzaSyAOpi471GQehJOJNj8C7bVOnqQ3-SSiTyE",
-        authDomain: "danskespil-970a3.firebaseapp.com",
-        databaseURL: "https://danskespil-970a3.firebaseio.com",
-        projectId: "danskespil-970a3",
-        storageBucket: "danskespil-970a3.appspot.com",
-        messagingSenderId: "253764022587",
-        appId: "1:253764022587:web:40c324ef9c1779c0"
-      };
-      // Initialize Firebase
-      firebase.initializeApp(firebaseConfig);
-    </script>
+  <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyAOpi471GQehJOJNj8C7bVOnqQ3-SSiTyE",
+      authDomain: "danskespil-970a3.firebaseapp.com",
+      databaseURL: "https://danskespil-970a3.firebaseio.com",
+      projectId: "danskespil-970a3",
+      storageBucket: "danskespil-970a3.appspot.com",
+      messagingSenderId: "253764022587",
+      appId: "1:253764022587:web:40c324ef9c1779c0"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
 
-    <!-- Bootstrap -->
-    <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-      crossorigin="anonymous"
-    ></script>
+  <!-- Bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
 
-    <script src="js/firebase.js"></script>
-    <script src="js/app.js"></script>
-  </body>
+  <script src="js/firebase.js"></script>
+  <script src="js/app.js"></script>
+</body>
+
 </html>
