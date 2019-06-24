@@ -50,6 +50,10 @@ let user = {
 let leaderboardNames = document.querySelector("#leaderboardNames");
 let leaderboardScores = document.querySelector("#leaderboardScores");
 
+/*closing rules by indre*/
+let closeRu = document.querySelector(".rules");
+/*closing rules by indre*/
+
 // INIT
 window.addEventListener("DOMContentLoaded", init());
 
@@ -63,6 +67,11 @@ function init() {
   logoutButtonEl.addEventListener("click", onLogout);
   formSubscribeEl.addEventListener("submit", subscribe);
   btnSpin.addEventListener("click", spin);
+
+  /*closing rules by indre*/
+  btnSpin.addEventListener("click", closeRules);
+  /*closing rules by indre*/
+
   btnSubscribeModal.addEventListener("click", subscribeGuest);
   btnCancelSubscribeModal.addEventListener("click", () => {
     const response = window.confirm(
@@ -94,6 +103,12 @@ function init() {
   introSound.volume = 0.25;
   introSound.play();
 }
+
+/*closing rules div by indre*/
+function closeRules() {
+  closeRu.style.display = "none";
+}
+/*closing rules div end by Indre*/
 
 // UTILITIES
 function checkSpins() {
@@ -205,7 +220,7 @@ function welcomeUser(user) {
           "#modalWelcomeNew .modal-subtitle"
         ).innerHTML = `Welcome back to Casino, <span class="nr--large">${
           user.username
-          }</snap>!`;
+        }</snap>!`;
         document.getElementById(
           "welcomeText"
         ).innerHTML = `Here is a welcome back 🎁<br>take 15 free spins to play the BRAIN SPIN game!<br>Good luck!`;
@@ -233,7 +248,6 @@ function outOfSpinsModalOpen() {
   $(".playFancy").addClass("disabled");
   $("#modalOutOfSpins").modal("show");
   $(".playFancy").addClass("disabled");
-
 }
 
 // SUBSCRIBE section
@@ -371,8 +385,8 @@ function getTopPlayersOnce() {
   //Reference to the collection
   userRef = db.collection("users");
   var query = userRef.orderBy("score", "desc").limit(9);
-  query.get().then(function (querySnapshot) {
-    querySnapshot.forEach(function (doc) {
+  query.get().then(function(querySnapshot) {
+    querySnapshot.forEach(function(doc) {
       let lead = document.createElement("li");
       let text = document.createTextNode(counter + ".  " + doc.data().username);
       lead.appendChild(text);
@@ -403,8 +417,8 @@ function getPlayers(currentUser) {
 
   //orders the data by score, from top to bottom and the return is limited to 9
   var query = userRef.orderBy("score", "desc").limit(9);
-  query.get().then(function (querySnapshot) {
-    querySnapshot.forEach(function (doc) {
+  query.get().then(function(querySnapshot) {
+    querySnapshot.forEach(function(doc) {
       //Check if the current user has one of the top 9 scores
       if (doc.data().username == currentUser) {
         inLead = true;
@@ -501,8 +515,8 @@ function getCurrentUsersPlace(currentUser) {
   } else {
     //not limit to the order since we want to find the current users positioning
     var query = userRef.orderBy("score", "desc");
-    query.get().then(function (querySnapshot) {
-      querySnapshot.forEach(function (doc) {
+    query.get().then(function(querySnapshot) {
+      querySnapshot.forEach(function(doc) {
         //increases the counter each loop, to see how many loops went by until the current user appears
         //a workaround because firebase apparently can't find the position of data in the database
         counter++;
